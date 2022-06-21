@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="form-details">
+    <h1>Registration Form</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="submitted = true">
+      <div class="form-group">
+        <label>
+          Name
+        </label>
+        <input type="text" class="form-control" formControlName="fullName" (keyup)="showName($event)">
+        <div
+          *ngIf="registerForm.controls['fullName'].invalid && (registerForm.controls['fullName'].dirty ||registerForm.controls['fullName'].touched)"
+          class="alert">
+          <div *ngIf="registerForm.controls['fullName'].errors?.['required']">
+            <p class="danger">Name is required.</p>
+          </div>
+          <div *ngIf="registerForm.controls['fullName'].errors?.['maxlength']">
+            <p class="danger">Name too long, must contain less than 75 characters</p>
+          </div>
+          <div *ngIf="registerForm.controls['fullName'].errors?.['pattern']">
+            <p class="danger"> A-Z characters are allowed only</p>
+          </div>
+        </div>
+
+        </div>
+    </form>
+  </div>
+  <div class="summary">
+    <h1>Summary</h1>
+    <p>Name: {{name}}</p>
+    <p>Car: {{selectedCar}}</p>
+    <p>Parts: {{selectedParts}}</p>
+    <button type="submit" class="btn" (click)="onSubmit()" [disabled]="registerForm.controls['fullName'].invalid">Submit</button>
+  </div>
+
+</div>

@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  margin: 1%;
+  padding: 1%;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  background-color: grey;
+}
+h1{
+  font-size: 5vmin;
+  color: white;
+}
+h2{
+  margin: 5px;
+  padding: 5px;
+  font-size: 4vmin;
+  color: white;
+}
+.form-details{
+
+  color: white;
+  width: 50vw;
+  margin: 1%;
+  padding: 5%;
+  border: 1px solid #000;
+}
+.summary{
+
+  align-items: center;
+  color: white;
+  justify-content: center;
+  width: 50vw;
+  margin: 1%;
+  padding: 5%;
+  border: 1px solid #000;
+}
+input{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  padding: 5px;
+}
+.danger{
+  background-color: red;
+  color: white;
+  width: 90%;
+  padding: 1%;
+}
+.btn{
+  background-color:rgb(118, 223, 118);
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 70px;
+  height: 30px;
+  color: white;
+}
+.btn:hover{
+  background-color:rgb(59, 241, 59);
+}
+.search-cars{
+  margin: 5px;
+  padding: 5px;
+  width: 30vw;
+}
+.search-parts{
+  margin: 5px;
+  padding: 5px;
+  width: 40vw;
+}

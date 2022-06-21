@@ -1,0 +1,15 @@
+
+
+<!--Using items input-->
+<div class="container">
+  <h2>Search Cars</h2>
+<div class="search-cars">
+<ng-select [items]="cars" bindLabel="brand" bindValue="brand"  [multiple]=false  [(ngModel)]="selectedCar" (change)="sendCars()">
+</ng-select>
+</div>
+<h2>Parts</h2>
+<div class="search-parts">
+  <ng-select [items]="parts" bindLabel="List of auto parts" bindValue="List of auto parts"  [multiple]=true  [(ngModel)]="selectedParts" (change)="sendParts()">
+  </ng-select>
+  </div>
+</div>
